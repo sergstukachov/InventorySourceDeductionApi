@@ -48,13 +48,14 @@ class ConfigProvider
 
     /**
      * @param $orderId
-     * @return false|mixed
+     * @return bool
      * @throws InputException
      * @throws NoSuchEntityException
      */
-    public function getIsEnable($orderId) {
+    public function getIsEnable($orderId): bool
+    {
         $scopeCode = $this->getStoreByOrder($orderId);
-        return $this->scopeConfig->getValue(self::XML_PATH_SHIPPING_API_QTY, self::SCOPE_TYPE_STORE, $scopeCode) ?? false;
+        return $this->scopeConfig->getValue(self::XML_PATH_SHIPPING_API_QTY, self::SCOPE_TYPE_STORE, $scopeCode);
     }
 
     /**
