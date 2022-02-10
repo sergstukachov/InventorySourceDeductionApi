@@ -1,0 +1,24 @@
+{
+    "name": "skillup/module-inventory-source-deduction-api",
+    "description": "Managing the change in the number of products during the creation of a Shipment",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Serg Stukachov",
+            "email": "sergstukachov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "magento/module-inventory-source-selection-api": "1.3.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "SkillUp\\SourceDeductionServiceApi\\": "1.0.0"
+        }
+    }
+}
